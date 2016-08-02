@@ -1,4 +1,18 @@
-<h2>Hello World</h2>
-<p>
-  The time is now: <%= Time.now %>
-</p>
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Todo List</h1>
+    <p class="lead">You can use admin panel to add Todo items, edit them, or even delete them. Click <a href="/admin">here</a>.</p>
+    <p><a class="btn btn-lg btn-primary" href="https://github.com/leoyuholo/eventxtra" role="button">GitHub Repo</a></p>
+  </div>
+  <div class="card-columns">
+    <% @todos.each_with_index do |todo, index| %>
+      <div class="card">
+        <div class="card-block">
+          <h4 class="card-title">#<%= index + 1 %> <%= todo.title %></h4>
+          <p class="card-text"><%= todo.text %></p>
+          <p class="card-text"><small class="text-muted">Last updated: <%= time_ago_in_words(todo.updated_at) %></small></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
