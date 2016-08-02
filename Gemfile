@@ -28,6 +28,8 @@ gem 'bourbon', '~> 4.2.7'
 
 gem 'bootstrap', '~> 4.0.0.alpha3.1'
 
+gem 'rails_refactor'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
